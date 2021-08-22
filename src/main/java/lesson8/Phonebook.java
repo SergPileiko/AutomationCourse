@@ -5,7 +5,6 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class Phonebook {
-
     Map<String, ArrayList<String>> map;
 
     public Phonebook() {
@@ -23,7 +22,7 @@ public class Phonebook {
 
     public void get(String lastname) {
         for (String str : map.get(lastname)) {
-            System.out.println(lastname + " " + str);
+            System.out.printf("%10s %10s\n", lastname, str);
         }
     }
 }

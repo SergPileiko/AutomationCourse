@@ -4,10 +4,9 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class Main {
-
     public static void main(String[] args) {
-        String[] strArr = new String[]{"Массив", "Коллекция", "Сортировка",
-                "Матрица", "Утро", "День", "Массив", "Коллекция", "Массив", "Вечер", "Книга", "Солнце", "Утро"};
+        String[] strArr = new String[]{"Массив", "Коллекция", "Сортировка", "Матрица",
+                "Утро", "День", "Массив", "Коллекция", "Массив", "Вечер", "Книга", "Солнце", "Утро"};
 
         findUnique(strArr);
 
@@ -15,8 +14,10 @@ public class Main {
         phonebook.add("Котов", "322-22-22");
         phonebook.add("Котов", "663-78-77");
         phonebook.add("Мышкин", "555-25-22");
+        phonebook.add("Иванов", "636-28-00");
         phonebook.add("Сидоров", "111-45-43");
 
+        System.out.printf("%10s | %10s\n", "Фамилия", "Номер телефона");
         phonebook.get("Сидоров");
         phonebook.get("Котов");
 
@@ -32,8 +33,9 @@ public class Main {
             }
             map.put(str, count);
         }
+        System.out.printf("%10s | %10s\n", "Уник. слова", "Встречается раз");
         for (Map.Entry<String, Integer> entry : map.entrySet()) {
-            System.out.println(entry.getKey() + " " + entry.getValue());
+            System.out.printf("%10s %10s\n", entry.getKey(), entry.getValue());
         }
     }
 }
