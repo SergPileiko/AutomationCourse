@@ -5,7 +5,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class Phonebook {
-    Map<String, ArrayList<String>> map;
+    private Map<String, ArrayList<String>> map;
 
     public Phonebook() {
         map = new HashMap<>();
